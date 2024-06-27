@@ -1,4 +1,4 @@
-package org.example.solid.singleresponsability;
+package org.example.solid.singleresponsability.book;
 
 import java.util.Set;
 

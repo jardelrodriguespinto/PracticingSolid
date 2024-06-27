@@ -1,6 +1,7 @@
-    package org.example.solid.singleresponsability;
+    package org.example.solid.singleresponsability.book;
 
     import java.util.HashSet;
+    import java.util.LinkedHashSet;
     import java.util.Set;
 
     public class Books implements BookOperation{
@@ -9,7 +10,7 @@
         @Override
         public  void addBook(Book book){
             if (books == null){
-                books = new HashSet<>();
+                books = new LinkedHashSet<>();
             }
 
             books.add(book);

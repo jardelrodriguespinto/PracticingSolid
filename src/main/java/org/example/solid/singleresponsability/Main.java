@@ -1,21 +1,38 @@
 package org.example.solid.singleresponsability;
 
-import java.util.Date;
+import org.example.solid.singleresponsability.order.InvoiceGenerator;
+import org.example.solid.singleresponsability.order.Order;
+import org.example.solid.singleresponsability.order.Product;
+import org.example.solid.singleresponsability.order.ProductBuilder;
+
+import java.math.BigDecimal;
 
 public class Main {
     public static void main(String[] args) throws Exception {
-        Book book1 = new Book("Livro 1", "Sei lá", new Date());
-        Book book2 = new Book("Livro 2", "Sei lá 2", new Date());
 
-        Books books = new Books();
-        books.addBook(book1);
-        books.addBook(book2);
+        Product pizza =  new ProductBuilder().setName("Pizza")
+                                                .setPrice(new BigDecimal(85))
+                                                .setAmount(3L).build();
 
-        books.showBooks();
+        Product soda =  new ProductBuilder().setName("Soda")
+                                             .setPrice(new BigDecimal(10))
+                                             .setAmount(2L).build();
 
-        books.deleteBooks(book2);
+        Order order = new Order();
 
-        books.showBooks();
+        System.out.println(order.showAllProducts());
+
+        order.addProduct(pizza);
+
+        System.out.println(order.calculateValueOrder());
+
+        order.addProduct(soda);
+
+        System.out.println(order.showAllProducts());
+
+        System.out.println(order.calculateValueOrder());
+
+        System.out.println(InvoiceGenerator.generateInvoice(order));
 
     }
 }
