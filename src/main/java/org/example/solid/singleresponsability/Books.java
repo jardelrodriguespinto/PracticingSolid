@@ -1,4 +1,4 @@
-    package org.example;
+    package org.example.solid.singleresponsability;
 
     import java.util.HashSet;
     import java.util.Set;
