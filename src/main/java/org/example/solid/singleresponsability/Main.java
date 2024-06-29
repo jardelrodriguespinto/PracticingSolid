@@ -4,8 +4,10 @@ import org.example.solid.singleresponsability.order.InvoiceGenerator;
 import org.example.solid.singleresponsability.order.Order;
 import org.example.solid.singleresponsability.order.Product;
 import org.example.solid.singleresponsability.order.ProductBuilder;
+import recursion.Recursion;
 
 import java.math.BigDecimal;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) throws Exception {
@@ -34,5 +36,12 @@ public class Main {
 
         System.out.println(InvoiceGenerator.generateInvoice(order));
 
+        String[] arr = {"bella","label","roller"};
+
+        System.out.println(Recursion.commonChars(arr));
+
+        System.out.println(Recursion.reverse("Pessoa", "Pessoa".length()));
+
+        System.out.println(Recursion.isPalindrome("ANA", "ANA".length()));
     }
 }
