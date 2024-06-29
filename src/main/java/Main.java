@@ -1,10 +1,8 @@
-package org.example.solid.singleresponsability;
-
 import org.example.solid.singleresponsability.order.InvoiceGenerator;
 import org.example.solid.singleresponsability.order.Order;
 import org.example.solid.singleresponsability.order.Product;
 import org.example.solid.singleresponsability.order.ProductBuilder;
-import recursion.Recursion;
+import practicingstreams.StreamsTeste;
 
 import java.math.BigDecimal;
 import java.util.*;
@@ -37,11 +35,16 @@ public class Main {
         System.out.println(InvoiceGenerator.generateInvoice(order));
 
         String[] arr = {"bella","label","roller"};
+        List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+        List<String> words = Arrays.asList("apple", "banana", "cherry");
+        List<Integer> unorderNumbers = Arrays.asList(1, 5, 3, 2, 4);
+        List<Integer> duplicateNumbers = Arrays.asList(1,1,2,2,3,2,5,4);
+        List<Integer> nums = Arrays.asList(-1,1,-2,2,-3,2,5,4);
 
-        System.out.println(Recursion.commonChars(arr));
+        System.out.println(StreamsTeste.convertListToMap(words));
+        System.out.println(StreamsTeste.hasNumberGraterThanTen(numbers));
+        System.out.println(StreamsTeste.calculateAverage(numbers));
 
-        System.out.println(Recursion.reverse("Pessoa", "Pessoa".length()));
 
-        System.out.println(Recursion.isPalindrome("ANA", "ANA".length()));
     }
 }
